@@ -1,0 +1,51 @@
+                    GENERICS TYPE
+Um tipo genérico é uma classe genérica ou interface que é parametrizada em relação a tipos.
+
+O simbolo <> é chamada de "diamond" ou "diamond operator" foi um recurso introduzido no java 7
+e é usado no contexto de tipos genéricos em java para inferir automaticamente o tipo com base no contexto.
+
+Utilizando uma classe de exemplo para exemplificar a classe tipo.
+
+public class Box{
+private Object object;
+public void set(Object object) {
+this.object = object;
+}
+public Object get(){
+return object;
+}
+}
+
+Para atualizar a classe box para usar generics, você cria uma declaração de tipo genérico
+alterando o código "public class Box" para "public class Box<T>"
+
+public classBox<T>{
+private Object object;
+public void set(T t) {
+this.t = t;
+}
+public T get(){
+return t;
+}
+}
+
+Como você pode ver, todas as ocorrências de Object foram substituidas por T.
+
+Uma variável de tipo pode ser qualquer tipo não primitivo que você especificar: qualquer tipo de classe,
+qualquer tipo de interface, qualquer tipo de array ou até mesmo outra variável de tipo.
+
+Essa mesma tecnica pode ser aplicada para criar interfaces genéricas.
+
+Os nomes de parâmetros de tipo mais comuns utilizados são:
+E: Elementos (Extensamente utilizado pelo java collections framework).
+K: Chave;
+N: Numero;
+T: Tipo;
+V: Valor;
+
+As vantagens em utilizar as Generics types são:
+1 Reutilização de código: Com o generics você pode criar classes e métodos genéricos que funcionam com diferentes coleções, evitando a duplicação de código.
+2 segurança de tipo de dados(safety type): O uso do generics garante que apenas objetos especificos seja adicionado a coleção.
+3 Código mais legivel:Com o uso do generics, você pode especificar o tipo de dado esperado ou retornado pela coleção.
+4 Detecta erros mais cedo: O compilador verifica se o generics está sendo usado corretamente durante a compilação.
+5 melhor desempenho: O uso do generics evita a mudança de tipo desnecessaria e permite que o compilador otimoze o código.

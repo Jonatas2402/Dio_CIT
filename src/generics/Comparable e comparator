@@ -1,0 +1,31 @@
+COMPARABLE
+
+Fornece uma unica sequencia de ordenação. Em outras palavras, podemos ordena uma coleção atraves de um unico elemento.
+como id, nome, preço.
+
+O comparable só altera a classe principal.(Implementar)
+
+Fornece o método compareTo() para ordena os elementos.
+
+Podemos ordenar os elementos da lista do tipo comparable usando o método collections.sort(list).
+
+
+COMPARATOR
+O Comparator fornece o método compare() para ordenar os elementos.
+
+O comparator oferece multiplas sequências de ordenação. Podemos ordena a coleção com base em inumeros elementos
+como id, nome, preço e etc.(Ideal para fazer multiplos métodos de comparação).
+
+O comparator não afeta a classe original, a classe atual não é modificada.(Implementar)
+
+Podemos ordenar os elementos da lista do tipo comparator usando o método collections.sort(list, comparator).
+
+COLLECTIONS
+A classe colelections é uma classe utilitária do java para operações comuns em coleção.
+
+Ela fornece métodos ordenar, buscar, manipulação e sincronização de coleções.
+
+O método sort() é usado para ordenar uma lista de forma ascendente
+
+O método sort() em conjunto com o collections.reverseOrder() permite ordenar em ordem descendente.
+
