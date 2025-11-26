@@ -1,0 +1,15 @@
+Uma collection é uma estrutura de dados que serve para agrupar muitos elementos
+em uma unica unidade, estes elementos precisão ser objetos.
+
+Uma collection pode ser homogêneas ou heterogêneas, normalmente nós umtilizamos coleções homogêneas.
+de um tipo especifico.
+
+Em collections temos quatro grandes tipos de coleções: List (lista), Set (conjunto), queue (fila)
+map (mapa). A partir dessas interfaces, temos muitas subclasses concretas que implementam
+varias formas diferentes de se trabalhar com cada coleção.
+
+Collections é como um array, sua diferença se da por não permitir tipos primitivos, apenas objetos (Object).
+Sendo assim para utilizar um int ou um double por exemplo devemos utilizar o wrapper da classe (Integer, Double).
+
+Map mesmo não sendo "filha" direta de Collections ela é considerada coleção pela sua função.
+
