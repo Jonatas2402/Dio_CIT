@@ -12,4 +12,8 @@ public class Tarefas {
         return descricao;
     }
 
+    @Override
+    public String toString() {
+        return descricao;
+    }
 }

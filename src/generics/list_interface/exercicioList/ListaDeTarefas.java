@@ -28,4 +28,13 @@ public class ListaDeTarefas {
     public void obterDescricoesTarefas() {
         System.out.println("Descrição: " + tarefasList);
     }
+
+    public static void main(String[] args) {
+        ListaDeTarefas listaDeTarefas = new ListaDeTarefas();
+        listaDeTarefas.obterNumeroTotalDeTarefas();
+
+        listaDeTarefas.adicionarTarefa("Fazer feira.");
+        listaDeTarefas.obterDescricoesTarefas();
+        listaDeTarefas.obterNumeroTotalDeTarefas();
+    }
 }
