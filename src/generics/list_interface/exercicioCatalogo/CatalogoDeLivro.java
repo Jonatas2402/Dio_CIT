@@ -1,13 +1,12 @@
 package generics.list_interface.exercicioCatalogo;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class CatalogoDeLivro {
     List<Livro> livros;
 
-    public CatalogoDeLivro(List<Livro> livros) {
+    public CatalogoDeLivro() {
         this.livros = new ArrayList<>();
     }
 
@@ -36,25 +35,30 @@ public class CatalogoDeLivro {
         }
         return livroPorIntervaloDeAno;
     }
-    public List<Livro> pesquisaPorTitulo(String titulo){
-        List<Livro> livroPorAutor = new ArrayList<>();
+    public Livro pesquisaPorTitulo(String titulo){
+        Livro livroPorTitulo = null;
         if (!livros.isEmpty()){
             for (Livro l : livros){
                 if (l.getTitulo().equalsIgnoreCase(titulo)){
-                    livroPorAutor.add(l);
+                    livroPorTitulo = l;
+                    break;
                 }
             }
         }
-        return livroPorAutor;
+        return livroPorTitulo;
     }
 
     public static void main(String[] args) {
-        CatalogoDeLivro catalogo = new CatalogoDeLivro(new ArrayList<>());
-        catalogo.adicionar("Princesa isabel", "Isabel", 2025);
-        catalogo.adicionar("João e o pé de feijão", "João", 2023);
-        catalogo.adicionar("Escrava isaura", "Isaura", 2024);
+        CatalogoDeLivro catalogo = new CatalogoDeLivro();
+        catalogo.adicionar("Livro 1", "Autor 1", 2025);
+        catalogo.adicionar("Livro 2", "Autor 2", 2023);
+        catalogo.adicionar("Livro 3", "Autor 3", 2020);
+        catalogo.adicionar("Livro 3", "Autor 2", 2000);
+        catalogo.adicionar("Livro 4", "Autor 4", 1890);
+        catalogo.adicionar("Livro 5", "Autor 5", 1998);
 
-        catalogo.pesquisarPorAutor("João");
+        System.out.println(catalogo.pesquisarPorAutor("Autor 2"));
 
+        System.out.println(catalogo.pesquisaPorTitulo("Livro 3"));
     }
 }
